@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alex McRoberts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <script src="js/scripts.js"></script>
+    <h1>Blog</h1>
+    <hr>
+    <article>
+        <header>
+            <h2>The reality of Apple and AR</h2>
+            <time>9th February 2023</time>
+        </header>
+        <section>
+            <p>It's been staring us in the face, for quite a while. With the rumour mill working over time on Apple's much anticipated headset, I thought it would be worthwhile to look at what's already in Apple's ecosystem, and how each piece might come together in a headset experience.</p>
+            <p>I worked for a startup, <a href="https://smartclothinglab.com/brands/what-happened-to-recon-instruments/">Recon Instruments</a>, in the early-to-mid 2010's working on a form of Augmented Reality – ski glasses, and sunglasses with a built in display. Recon Instruments was then acquired by Intel, we started working on <a href="https://www.theverge.com/2018/2/5/16966530/intel-vaunt-smart-glasses-announced-ar-video">some interesting projects there too</a>.</p>
+            <p>I'll cover each of the components as they exist today, and go over some of the ways the technology might be applied into a Augmented Reality or Virtual Reality headset.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Wifi display powered by iPhone</h3>
+            <figure>
+                <blockquote cite="https://www.apple.com/ca/airplay/">
+                    <p>AirPlay lets you share videos, photos, music and more from Apple devices to your Apple TV, favourite speakers and popular smart TVs.</p>
+                </blockquote>
+                <figcaption>– apple.com AirPlay</figcaption>
+            </figure>
+            <p>Let's change that sentence just a bit.</p>
+            <p>We know that powering displays is a battery intensive exercise. So, let's move the processor power required to calculate what to display on the display, and how, let's use AirPlay to keep that on the iPhone.</p>
+            <p>This lines up well with the idea that the headset will include a <a href="https://www.macrumors.com/2023/01/03/report-reveals-wave-of-features-for-apple-headset/">waist-mounted battery pack</a>.</p>
+            <figure>
+                <blockquote>
+                    <p>AirPlay lets you share videos, photos, music and more from Apple devices to your Apple TV, <em><b>Apple Headset,</b></em> favourite speakers and popular smart TVs.</p>
+                </blockquote>
+                <figcaption>– me</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>Face ID sensors for eye tracking</h3>
+            <p>Face ID on iOS already has settings for Attention built in. You can set iOS to Require Attention for Face ID - to verify that you're looking at iPhone before it authenticates your face.</p>
+            <p>Attention Aware Features is more interesting to me. iPhone will check for attetnion before dimming the display, expanding a notification when locked, or lowering the volume of alerts</p>
+            <p>Assuming Face ID is tuned to it could also run inside a headset to determine, not only if you're paying attention, but where your eyes are focused on, delivering an ability to track your eyes. This opens up new possibilities for inputs, and events to drive interactions with the headset.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>LiDAR & Camera for inside-out tracking</h3>
+            <p>In March 2020, Apple launched iPad Pro with a rear facing LiDAR sensor. With a range of upto 5 metres (~16 feet), this would provide enough distance to wear a Virtual Reality headset and make the human aware of their surroudings – "Watch out for the chair!"</p>
+            <figure>
+                <blockquote cite="https://conferences.lib.unb.ca/index.php/tcrc/article/view/645">
+                    <p>Results showed that with Modelar's laser scanner application, absolute accuracies of ± 3 cm horizontally and ± 7mm vertically is achieved, while also achieving a relative accuracy of ± 3 cm</p>
+                </blockquote>
+                <figcaption>– Payton Chase et al, Department of Geodesy and Geomatics Engineering, University of New Brunswick</figcaption>
+            </figure>
+            <img src="" alt="">
+            <p>Of course, the camera could also be used in parallel with the LiDAR sensor to present the real world in a Virtual Reality headset. No surprises there</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Spatial Audio</h3>
+            <p>September 2020 saw Apple launch Spatial Audio. Also known as Virtual Surround Sound, it can provide an ability to hear the music all around you. Rather than splitting the audio to left and right, as we're used to with Stereo Sound; Spatial Audio presents the audio in a format that makes the person wearing the headset feel as those they're in the middle of the recording. By turning around on the spot, the audio is perceived to move around the person wearing the audio headset.</p>
+            <p>Virtual Reality headsets do the same with displays today. As the person wearing the headset turns left or right, the display changes to show what is in front of the person, in the direction they are looking.</p>
+            <p>Spatial Audio achieves the same effect with audio. Now imagine wearing a Virtual Reality headset and perceiving the audio changing to reflect the direction you're looking in.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Homepod Mic Arrays</h3>
+            <p>The 1st generation Homepad contained a 6-mic array, while the Homepod mini contains a 3-mic array, and the recently released 2nd Generation (<a href="https://overcast.fm/+R7DVBgidM/21:35">Version 1.5 according to the kind folks at ATP.fm</a>), contains a 4-mic array.</p>
+            <p>Was the number of mics reduced due to cost, or due to improved software technology meaning fewer mics are required? If we assume the latter, that's a big win for a headset – a gadget where every gram of weight truly matters.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Homepod Room Sense Technology</h3>
+            <p>If you're wearing a Virtual Reality headset, there's a good chance you'll be standing in a room.</p>
+            <figure>
+                <blockquote cite="https://www.apple.com/ca/newsroom/2023/01/apple-introduces-the-new-homepod-with-breakthrough-sound-and-intelligence/">
+                    <p>With room sensing technology, HomePod recognizes sound reflections from nearby surfaces to determine if it is against a wall or freestanding, and then adapts sound in real time. Precise directional control of its beamforming array of five tweeters separates and beams direct and ambient audio, immersing listeners in crystal-clear vocals and rich instrumentation.</p>
+                </blockquote>
+                <figcaption>– apple.com, Press Release, January 18, 2023</figcaption>
+            </figure>
+            <p>The ability to have room sensing technology, which can recognize sound reflections, and adapt sound in real time will lead to higher quality audio experiences wearing a headset. Suddenly you're not just wearing a headset talking to somebody else wearing a headset, but the sound quality just went <em>way up</em>.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>AirTags and Ultra-wideband</h3>
+            <p>Ultra-wideband, UWB, ultra wideband, ultra-wide band, ultraband. However you spell it, this technology is ideal for precision location – operating with accuracy as good as 5-10 centimetres (2-4 inches).</p>
+            <p>A stretch, but this could pair well with a LiDAR to detect handheld controls for a headset. I'd doubt the AirTag form factor would remain, and it's unlikely to morph into a <a href="https://en.wikipedia.org/wiki/Power_Glove">VR Power Glove</a>. Perhaps Hermes will manufacturer some high end gloves instead 😬.</p>
+            <figure>
+                <blockquote cite="https://www.electronicdesign.com/technologies/communications/article/21800581/whats-the-difference-between-measuring-location-by-uwb-wifi-and-bluetooth">
+                    <p>In practice, UWB signals are able to effectively measure distance between two devices with 5- to 10-cm accuracy, compared to roughly 5-m accuracy for Wi-Fi and Bluetooth. When implemented in a system of fixed beacons tracking tag locations, the locations can be calculated to within 10-cm accuracy.</p>
+                </blockquote>
+                <figcaption>– electronicdesign.com, What’s The Difference Between Measuring Location By UWB, Wi-Fi, and Bluetooth?</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>AppleTV as a Hub</h3>
+            <p>File this under a thought based on a rumour. MacRumors shared an interesting take from Jon Prosser in October 2020, that the HomePod mini and Apple TV would act as Ultra-wideband base-stations</p>
+            <p>If the headset has Inside-out tracking, perhaps there's some accuracy gains to be had adding Outside-In tracking using an AppleTV as a point of reference.</p>
+            <p>I think this is unlikely. While Apple Watch without cellular requires an iPhone to operate, I don't see Apple applying the same level of demand here.</p>
+            <figure>
+                <blockquote cite="https://twitter.com/jon_prosser/status/1315446364856352768?s=20">
+                    <p>HomePod mini & the new Apple TV will both act as UWB base-stations 🧐</p>
+                    <ul>
+                        <li>Will precisely track your location as you walk inside house with other U1 devices.</li>
+                        <li>Use info for media controls, brightness/volume control, & door locks.</li>
+                    </ul>
+                    <p>Turns regular hardware into HomeKit hardware.</p>
+                </blockquote>
+                <figcaption>– "not jon prosser"</figcaption>
+            </figure>
+        </section>
+    </article>
+  </body>
+</html>
