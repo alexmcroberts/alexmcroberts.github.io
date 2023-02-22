@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alex McRoberts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <!-- <script src="js/scripts.js"></script> -->
+    <h1><a href="/index.html">Alex McRoberts – Blog</a></h1>
+    <header>Follow me on Mastodon: <a rel="me" href="https://mastodon.social/@alexmcroberts">@alexmcroberts@mastodon.social</a></header>
+    <hr>
+    <div>This is second post in a series of Apple and Augmented Reality:</div>
+    <ul>
+        <li><a href="/the-reality-of-apple-and-ar.html">Part 1: The Reality of Apple and AR</a></li>
+    </ul>
+    <article>
+        <header>
+            <h2>Apple and AR – Human Interface Guidelines</h2>
+            <time>21st February 2023</time>
+        </header>
+        <section>
+            <p>This is the second post in the series digging in to Apple's future with AR. <a href="index.html">Check out Part 1: The reality of Apple and AR</a></p>
+            <p>Since they <a href="https://web.archive.org/web/20211011041410/https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf">launched in 1987</a>, Apple's <a href="https://developer.apple.com/design/human-interface-guidelines/guidelines/overview">Human Interface Guidelines</a> have long been held as a standard for understanding how to build experiences for people using Apple products.</p>
+            <p>I'll cover how the Human Interface Guidelines might be revealing a lot more about the Apple AR headset than we would other guess at.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Augmented Reality</h3>
+            <p>Let's start with Apple's <a href="https://developer.apple.com/design/human-interface-guidelines/technologies/augmented-reality/">Augmented Reality</a> guidelines. I'll expand on how the wider Human Interface Guidelines point towards supporting Augmented Reality in the next post.</p>
+            <p>I highlighted in the first post the obvious thing that struck me when reading the guidelines. The Human Interface Guidelines, does not suggest that ARKit is limited to iPhone. A quick search on the page shows:</p>
+            <ul>
+                <li>0 – The word "iPhone" never appears in the guideline.</li>
+                <li>6 – The word "phone" appears six times, but only for subtext.</li>
+                <li>18 – The word "device" appears 18 times ... 🤔</li>
+            </ul>
+            <p>The sections below are taken from the list I highlighted in the first post. Let's take a closer look at each one. It's clear Apple are paving the way for thoughtful experiences in a headset form factor with these guidelines.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Creating an engaging, comfortable experience</h3>
+            <p>Strive for convincing illusions when placing realistic objects. Apple has long since focused on helping developers deliver a high quality experience for the end user.</p>
+            <p>ARKit provides information to allow objects to be scaled and placed on detected surfaces. It's likely all of the sensors used in ARKit today will make their way over to the AR headset.</p>
+            <p>People interacting with Augmented Reality experiences will want to be engaged, and they will want to feel comfortable doing it. Think back to the first few iPhone apps – this is an entirely new world of apps.</p>
+            <p>The user experience will have to delight, and entertain to capture the attention of the person wearing the headset. Remember, immersive content gives you no chance to back out slowly. Like 3D cinema, if it's going to immerse you, it better be good, or you'll never go back.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Consider how virtual objects with reflective surfaces show the environment</h3>
+            <p>Reflective surfaces significantly add to the realism of an Augmented Reality experience. Apple's ARKit handles some of this with built in SDKs, as we'll discover in the next blog post.</p>
+            <p>It's vital that the reflections are as true to life as possible; and handle any raycasting to make sure objects appear as close to real as possible – when needed. Remember not everything in Augmented Reality needs to exist – think magic Dragons here – but they should appear realistic in terms of shadows, lighting and reflections.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Use audio and haptics to enhance the immersive experience</h3>
+            <p>In the first post, I covered how spatial audio is crucial to an immersive Augmented Reality experience. When a person wears a headset, spatial audio provides a new sense to the wearer. Presenting noise that appears to come from behind the person wearing the headset, will open up new methods of interaction. There's so much potential here, including virtual gameplay, where characters can exist all around the person wearing the headset. Just like in real life, it'll be possible to understand where that character is – in front, to the left, behind, even on the ground below them.</p>
+            <p>The same is true for Spatial Haptics with Apple's Taptic Engine. The linear actuator provides high fidelity haptic feedback. Currently Apple's Taptic Engine is used for 3D touch on Macbook touchpads, as well as haptic feedback for both iPhone and Apple Watch. Interestingly, iPad doesn't include the Taptic Engine. This is likely due to the size of the surface area of iPad, which would require 4 to 6 Taptic Engines to create a high quality experience.</p>
+            <p>Spatial Haptics might require 2 to 3 Taptic Engines to run on an AR headset, to provide a high fidelity experience. I'd expect Spatial Haptics to be useful for interacting with objects in the display – tapping an icon, picking up an object etc. There's some idea that it might be used as a modern take on the Nintendo Rumble Pak or the Playstation Dualshock – during gameplay for example. I'd expect Apple to make developers very aware of the impact this would have to users, with intense vibrations around a person's head likely being quite uncomfortable.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Minimize text in the environment</h3>
+            <p>This was something we called out in <a href="https://web.archive.org/web/20120819140824/http://developers.reconinstruments.com:80/design-principles">Recon's Design Principles over 10 years</a>. Minimizing clutter, and only presenting the information required for a person to successfully interact with the AR experience is in an important design guideline.</p>
+            <p>You can imagine wearing an Augmented Reality headset on a busy shopping street, like Time Square in New York. If you begin looking around to see what shops are located in which building, you might expect a label to indicate what direction to head in for a certain shop.</p>
+            <p>If the labels didn't continue to disappear as you look around, the experience might be comparable to a 3D version of Tetris. Little blocks of information constantly streaming at your face "Disney Store 40 yards", "Old Navy 65 yards to your left".</p>
+            <p>The experience would be overwhelming, with too much clutter on screen, making it too confusing, and would only serve to distract you, and deteriorate your experience.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Anticipate that people will use your app in a wide variety of real-world environments</h3>
+            <p>An important callout, and one that shouldn't be overlooked. It's easy to design an experience at a desk in your office. There's the adage of watching a user trying your product for the first time. It can be exhilirating, and also extremely frustrating.</p>
+            <p>When it comes to designing for Augmented Reality experiences, this is something the team I worked on at Recon and Intel had to deal with quite a lot. At Recon, our focus was on skiing and snowboarding. Then with the addition of the Recon Jet, we added Cycling and Running. The environment that a person is in, while wearing an Augmented Reality head greatly affects the experience.</p>
+            <p>Fortunately, as the company was based in Vancouver, BC, we had enough skiiers, snowboarders, cyclists and runners to put the devices through their paces. Having that experience to understand how your AR experience will be used in the real world is something that will help the best AR experiences be differentiated from good AR experiences.</p>
+            <p>Remember in different environments, different input methods might be required – if they're on a bicycle, it could be too windy to ask Siri for help. A person's attention span might be limited if they're on a busy ski run, so, it's important to only show just enough information for the person to understand what's happening around them.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Be mindful of people's comfort</h3>
+            <p>Comfort includes acccessibility. It's one thing to be aware the VoiceOver support is needed for webpages. It's quite another to understand how intense strobing lights are during an Augmented Reality or Virtual Reality experience.</p>
+            <p>The interactions required to use the tool too is a major consideration for comfort. One can easily imagine a Web Browser window in an Augmented Reality headset, where the interaction mode for scrolling the page is to nod up and down…please don't do <i>that</i>.</p>
+            <p>My first job after graduating University, was working as a Postgraduate Researcher at the same faculty. I worked on Smart Homes, <a href="https://www.researchgate.net/publication/225147954_Towards_Standardized_User_and_Application_Interfaces_for_the_Brain_Computer_Interface">Brain Computer Interfaces (BCI)</a> and <a href="https://www.researchgate.net/publication/268304570_Scoping_the_Potential_for_Anytime-Anywhere_Support_Through_Virtual_Mentors">Virtual Mentors (aka Chatbots!)</a> before it was cool.</p>
+            <p>The Brain Computer Interface project was truly a marvel to work on. Attaching "wet electrodes" dipped in gel to the outside of your brain, through essentially what amounted to a swimcap, leaves an impression. One of my colleagues was paraplegic. Watching the joy on his face as he was able to control the application with these electrodes really opened my eyes to what User Experience is.</p>
+            <p>While the system was state of the art in it's time, it didn't take long for user fatigue to kick in. The same will be true for Augmented Reeality and Virtual Reality headset experiences. They will need to be designed for people to use for short periods of time at first.</p>
+            <p>Augmented Reality systems will require new modes of interaction, and input, and it will be interesting to see how people's comfort adapts to these new paradigms.</p>
+            <p>The sensors on the Apple headset should be able to monitor for fatigue. I can think of sensing reduced movement patterns, sensing for a person stretching their neck left and right, and staring up to the sky to alleviate any neck stiffness.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Be mindful of people's safety</h3>
+            <p>At Intel, we ran pilot projects working in some of the warehouses, in Chandler, Arizona. While our project was limited to a small section of the warehouse, from where we were based, we could see and hear forklift trucks moving around the warehouse.</p>
+            <p>Wearing an Augmented Reality headset, can be a truly immersive experience. A person wearing the headset doesn't need to be surrounded by a 360 degree experience for it to be defined as immersive. Simply being "in the zone" of a task is enough to distract from what's going on around them.</p>
+            <p>This is comparable to people down the street on their phone, not seeing the park bench they walk in to, or the person walking the other direction who has to juggle their hot coffee to avoid spilling their coffee on their jacket.</p>
+            <p>These are trivial examples. In a factory warehouse, safety is paramount, and really needs factored in to the experience. That's where I think the external camera and sensors on the Apple headset can help. <em>iOS already has Sound Recogition built in today</em>. I can imagine this software transferring directly over to the headset – "alert me if you hear a siren" – what a brilliant safety feature!</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Using coaching to get people started</h3>
+            <p>This is something 2D video games from the 1980s and 1990s got right. Playing games like Super Mario Bros, and Sonic the Hedgehog required people to understand the game play mechanisms. They needed to be understood quickly and easily, so the player could advance through the game.</p>
+            <p>These games would often start right on Level 1, and would prompt the player into understanding how to make the character walk, jump and run.</p>
+            <p>Augmented Reality is still a relatively new interaction paradigm. People will need to understand how to interact with the app, what to expect, and how to use hidden User Interfaces – like asking questions, tapping the headset to display a settings menu, or jumping up and down to use an accelorometer to trigger pogo stick mode.</p>
+            <p>Coaching should be at the right time and the right place. Each app will have it's own experience. Some coaching will be required before the app truly starts, while other coaching can happen as the person advances in using the app.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Let people use direct manipulation to interact with objects when possible</h3>
+            <p>People manipulate objects all the time in real life. Picking up fruit in the grocery store, to place in their basket. Driving a car by turning the steering wheel. Navigating through the streets by controlling their power wheel chair with a sip and puff controller.</p>
+            <p>Augmented Reality shouldn't be any different. Sure, the objects a person will interact with might be a dog from a comic book – but that's the fun of Augmented Reality. Interacting with objects as you would, if they existed in physical form, in real life.</p>
+            <p>Virtual Reality headsets presented us with primitive and clunky interactions – using the big and chunky wand like devices. With the advances in object detection from cameras, it's likely that Apple will allow people to control and manipulate objects with their hands. I'll cover this in more detail in the next blog post.</p>
+            <p>Going full <a href="https://www.imdb.com/title/tt0181689/">Minority Report</a> will be a step too far - but I can see a place for simple hand gestures that would be detected by external cameras on the headset. This would allow swiping with either hand, pinching with a finger and thumb, zooming with two hands, and tapping with a finger.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Designing a great multiuser experience</h3>
+            <p>I think the mere mention of multiuser, says a lot about the intended use cases Apple has in mind for the headset. People will be using the headset for individual tasks, and there'll be opportunities to collaborate with others in certain tasks too.</p>
+            <p>Multiplayer games spring to mind right away – Pokémon being a good example of this. Personally, I'm more excited to see how multiuser experiences are developed for collaboration: Architects working in teams to walk through a virtual space; transportation engineers working on a 3D design of a part to understand and <em>see</em> how aerodynamics of it are affected in almost real time.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Consider enabling people occlusion</h3>
+            <p>I consider this to be a key consideration for apps offering multiuser experiences. Seeing Pikachu hiding behind another person in the Augmented Reality experience, creates depth and further realism to the person wearing the headset.</p>
+            <p>Of course, the person wearing the headset, may be the only person wearing a headset in their immediate area. Having people occlusion work for others in the same immediate area will rely on the external camera feed, as it does today on iPhone and iPad.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Summary</h3>
+            <p>Apple's Human Interface Guidelines really provide some thought provoking guidedance here. From working in Augmented Reality, I've seen firsthand how guidelines really help shape developers thinking.</p>
+            <p>It's easy to fall into the trap of designing an experience sitting at a desk. Until the experience is tested by an end user, it's likely to have missed a few key things – especially in the world of Augmented Reality where everything is a little more complicated than developing for iPhone.</p>
+            <p>Let me know if you think this post was interesting. I'm <a href="https://mastodon.social/@alexmcroberts">@alexmcroberts@mastodon.social</a></p>
+        </section>
+    </article>
+  </body>
+</html>

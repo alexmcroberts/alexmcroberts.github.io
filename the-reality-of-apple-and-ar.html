@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alex McRoberts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <!-- <script src="js/scripts.js"></script> -->
+    <h1><a href="/index.html">Alex McRoberts – Blog</a></h1>
+    <header>Follow me on Mastodon: <a rel="me" href="https://mastodon.social/@alexmcroberts">@alexmcroberts@mastodon.social</a></header>
+    <hr>
+    <div>This is first post in a series of Apple and Augmented Reality:</div>
+    <ul>
+        <li><a href="/apple-and-ar-human-interface-guidelines.html">Part 2: The Reality of Apple and AR</a></li>
+    </ul>
+    <article>
+        <header>
+            <h2>The reality of Apple and AR</h2>
+            <time>9th February 2023</time>
+        </header>
+        <section>
+            <p>Apple's work on Augmented Reality and Virtual Reality has been staring us in the face, for quite a while. With the rumour mill working over time on Apple's much anticipated headset, I thought it would be worthwhile to look at what's already in Apple's ecosystem, and how each piece might come together in an Apple designed headset.</p>
+            <p>For context, I worked for a startup, <a href="https://smartclothinglab.com/brands/what-happened-to-recon-instruments/">Recon Instruments</a>, in the early-to-mid 2010's working on a form of Augmented Reality – ski glasses, and sunglasses with a built in display. Recon Instruments was then acquired by Intel, where we started working on <a href="https://www.theverge.com/2018/2/5/16966530/intel-vaunt-smart-glasses-announced-ar-video">some other interesting projects</a>.</p>
+            <p>I'll cover a few components as they exist today in Apple's ecosystem, and how the technology might be transformed, and applied in a Augmented Reality or Virtual Reality headset.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>ARKit</h3>
+            <p>Starting with the obvious. Apple has not only written ARKit, they've also provided an entire section in their famous <a href="https://developer.apple.com/design/human-interface-guidelines/technologies/augmented-reality/">Human Interface Guidelines</a>. I'm going to cherry pick some of the highlights here for guidelines that can work on iPhone, and can easily be transformed to work on a headset. </p>
+            <p>One thing strikes me when reading the guidelines. The Human Interface Guidelines, does not suggest that ARKit is limited to iPhone. A quick search on the page shows:</p>
+            <ul>
+                <li>0 – The word "iPhone" never appears in the guideline.</li>
+                <li>6 – The word "phone" appears six times, but only for subtext.</li>
+                <li>18 – The word "device" appears 18 times ... 🤔</li>
+            </ul>
+            <p>This section will only cover the highlights of the Human Interface Guidelines. If this post seems interesting enough to folks, I'll turn this into a short series of posts, covering the Human Interface Guidelines in more detail, as well as doing a deeper dive into the ARKit documentation itself</p>
+            <p>Below, I've copied some of the key guidelines from the Human Interface Guidelines. Later in the series, I'll dig into these a bit deeper.</p>
+            <ul>
+                <li>Strive for convincing illusions when placing realistic objects</li>
+                <li>Consider how virtual objects with reflective surfaces show the environment</li>
+                <li>Use audio and haptics to enhance the immersive experience</li>
+                <li>Minimize text in the environment</li>
+                <li>Anticipate that people will use your app in a wide variety of real-world environments</li>
+                <li>Be mindful of people's comfort</li>
+                <li>Be mindful of people's safety</li>
+                <li>Using coaching to get people started</li>
+                <li>Let people use direct manipulation to interact with objects when possible</li>
+                <li>Designing a great multiuser experience</li>
+                <li>Consider enabling people occlusion</li>
+            </ul>
+            <p>Looking at that list, it's easy to see where Augmented Reality is heading.</p>
+            <p>Create a realistic experience, including handling reflective surfaces. This is going to be crucial to make sure that the experience feels polished, and not gimmicky to people when they first try on the headset. Immersive audio (more on this later in the post), and encouraging developers to reduce clutter also adds to the level of polish.</p>
+            <p>Consider where people will use the app – and consider their comfort and safety. Interactive experiences on iPhone are typically short-lived. A fun game <a href="https://apps.apple.com/us/app/pok%C3%A9mon-go/id1094591345">catching virtual creatures</a>, or an app to test out what <a href="https://apps.apple.com/us/app/wayfair-shop-all-things-home/id836767708">new furniture would look like in a room</a>. Not much to worry about there for comfort. Saftey concerns are real though – imagine if Pikachu was in the middle of a deep puddle, or worse the middle of a road - a person might ignore the real world environment, to catch 'em all. Comfort and safety wearing a headset will be even more important!</p>
+            <p>Coaching is a vital component of making people familar with a headset experience. Typically, there's a lot of hidden controls in Augmented Reality. It's easy to equate this experience to using Siri. It's often difficult to remember the exact phrase needed when asking Siri a question. There's no menu of prompts. A person often has to remember <em>the magic incantation</em> to make it work.</p>
+            <p>The last two points are quite noteworthy – designing multiuser experiences that handle people occlusion. When combined with the reference to handle people using the app in a variety of environments, it's clear that Apple sees small groups of people wearing their headset and collaborating together. In Apple's own ARKit documentation they state</p>
+            <figure>
+                <blockquote cite="https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/3152987-iscollaborationenabled">
+                    <p>Collaborative sessions work best with up to four participants.</p>
+                </blockquote>
+                <figcaption>– <a href="https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/3152987-iscollaborationenabled">https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/3152987-iscollaborationenabled</a></figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>Wifi display powered by iPhone</h3>
+            <figure>
+                <blockquote cite="https://www.apple.com/ca/airplay/">
+                    <p>AirPlay lets you share videos, photos, music and more from Apple devices to your Apple TV, favourite speakers and popular smart TVs.</p>
+                </blockquote>
+                <figcaption>– <a href="https://www.apple.com/ca/airplay/">apple.com AirPlay</a></figcaption>
+            </figure>
+            <p>Let's change that sentence just a bit.</p>
+            <p>We know that displays require a lot of battery power. iPhone could determine what to display on the headset and transmit that to the headset using AirPlay. This is  tricky. It would be likely that iPhone would need to be aware of the environment, which could require two-way communication to send a user's orientation – where they're looking and how their head is tilted. This would require an iPhone to use and operate the headset. It's unlikely that Apple would want to tether a headset to iPhone – albeit possible for a 1st generation product.</p>
+            <p>This lines up well with the idea that the headset will include a <a href="https://www.macrumors.com/2023/01/03/report-reveals-wave-of-features-for-apple-headset/">waist-mounted battery pack</a>.</p>
+            <figure>
+                <blockquote>
+                    <p>AirPlay lets you share videos, photos, music and more from Apple devices to your Apple TV, <em><b>Apple Headset,</b></em> favourite speakers and popular smart TVs.</p>
+                </blockquote>
+                <figcaption>– me</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>Face ID sensors for eye tracking</h3>
+            <p>Face ID on iOS already has settings for Attention built in. It's possible to set iOS to Require Attention for Face ID - to verify that you're looking at iPhone before it authenticates your face.</p>
+            <p>Attention Aware Features is even more interesting to me. iPhone will check for attetnion before dimming the display, expanding a notification when locked, or lowering the volume of alerts</p>
+            <p>A quick test here showed me Face ID works at a distance of about 15 centimetres (6 inches) away from my face. Assuming Face ID can be tuned to function closer to the faces, it's possible that it could run inside a headset to determine, not only if you're paying attention, but where your eyes are focused on. This would deliver the allow the headset to track your eyes. This opens up new possibilities for inputs, and events to drive interactions with the headset and apps running on it.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>LiDAR & Camera for inside-out tracking</h3>
+            <p>In March 2020, Apple launched iPad Pro with a rear facing LiDAR sensor. With a range of upto 5 metres (~16 feet), this would provide enough distance to wear a Virtual Reality headset and make the human aware of their surroudings – "Watch out for the chair!"</p>
+            <figure>
+                <blockquote cite="https://conferences.lib.unb.ca/index.php/tcrc/article/view/645">
+                    <p>Results showed that with Modelar's laser scanner application, absolute accuracies of ± 3 cm horizontally and ± 7mm vertically is achieved, while also achieving a relative accuracy of ± 3 cm</p>
+                </blockquote>
+                <figcaption>– <a href="https://conferences.lib.unb.ca/index.php/tcrc/article/view/645">Payton Chase et al, Department of Geodesy and Geomatics Engineering, University of New Brunswick</a></figcaption>
+            </figure>
+            <img src="" alt="">
+            <p>According to independent tests, the Apple LiDAR sensor has a fairly high resolution and accuracy. This provides a great ability for the wearer to move with confidence in their space for comfort and safety. It also provides the opportunity to address the guideline of dealing with surface reflection and occlusion. Of course, the camera could also be used in parallel with the LiDAR sensor to present the real world in a Virtual Reality headset. No surprises there.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Spatial Audio</h3>
+            <p>September 2020 saw Apple launch Spatial Audio. Also known as Virtual Surround Sound, it can provide an ability to hear the music all around you. Rather than splitting the audio to left and right, as we're used to with Stereo Sound; Spatial Audio presents the audio in a format that makes the person wearing the headset feel as those they're in the middle of the recording. By turning around on the spot, the audio is perceived to move around the person wearing the audio headset.</p>
+            <p>Virtual Reality headsets do the same with displays today. As the person wearing the headset turns left or right, the display changes to show what is in front of the person, in the direction they are looking.</p>
+            <p>Spatial Audio achieves the same effect with audio. Now imagine wearing a Virtual Reality headset and perceiving the audio changing to reflect the direction you're looking in.</p>
+            <p>Immersive audio is so important to Apple they called it out in their Human Interface Guidelines. I'm willing to bet the headset will have built in speakers, and also work with Airpods that support Spatial Audio.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Homepod Mic Arrays</h3>
+            <p>The 1st generation Homepad contained a 6-mic array, while the Homepod mini contains a 3-mic array, and the recently released 2nd Generation (<a href="https://overcast.fm/+R7DVBgidM/21:35">Version 1.5 according to the kind folks at ATP.fm</a>), contains a 4-mic array.</p>
+            <p>Was the number of mics reduced due to cost, or due to improved software technology meaning fewer mics are required? If we assume the latter, that's a big win for a headset – a gadget where every gram of weight truly matters.</p>
+            <p>Mic array technology will be extremely useful to permit the headset to show a user where audio is coming from. I can imagine an experience where Spatial Audio projects the Mic array, and with the Mic array information available as an SDK, it would be possible to show an in-app visual experience of where audio is happening in a person's current environment.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>Homepod Room Sense Technology</h3>
+            <p>If you're wearing a Virtual Reality headset, there's a good chance you'll be standing in a room. Even so, with an Augmented Reality headset, how audio is presented to a user will depend on where they're located in the real world. Are they standing against a wall, in the middle of a mall, in a showroom? The consequences to audio treatment can use this technology to deliver an immersive audio experience.</p>
+            <figure>
+                <blockquote cite="https://www.apple.com/ca/newsroom/2023/01/apple-introduces-the-new-homepod-with-breakthrough-sound-and-intelligence/">
+                    <p>With room sensing technology, HomePod recognizes sound reflections from nearby surfaces to determine if it is against a wall or freestanding, and then adapts sound in real time. Precise directional control of its beamforming array of five tweeters separates and beams direct and ambient audio, immersing listeners in crystal-clear vocals and rich instrumentation.</p>
+                </blockquote>
+                <figcaption>– <a href="https://www.apple.com/ca/newsroom/2023/01/apple-introduces-the-new-homepod-with-breakthrough-sound-and-intelligence/">apple.com, Press Release, January 18, 2023</a></figcaption>
+            </figure>
+            <p>The ability to have room sensing technology, which can recognize sound reflections, and adapt sound in real time will lead to higher quality audio experiences wearing a headset. Suddenly you're not just wearing a headset talking to somebody else wearing a headset, but the sound quality just went <em>way up</em>.</p>
+        </section>
+        <hr>
+        <section>
+            <h3>AirTags and Ultra-wideband</h3>
+            <p>Ultra-wideband, UWB, ultra wideband, ultra-wide band, ultraband. However you spell it, this technology is ideal for precision location – operating with accuracy as good as 5-10 centimetres (2-4 inches).</p>
+            <p>A stretch, but this could pair well with a LiDAR to detect handheld controls for a headset. I'd doubt the AirTag form factor would remain, and it's unlikely to morph into a <a href="https://en.wikipedia.org/wiki/Power_Glove">VR Power Glove</a>. Perhaps Hermes will manufacturer some high end gloves instead 😬.</p>
+            <p>In reality, it's possible that Ultra-wideband could be used to show objects to find, or interact with. If you've ever used the Find My app, you can see how the experience could translate onto an Augmented Reality headset.</p>
+            <figure>
+                <blockquote cite="https://www.electronicdesign.com/technologies/communications/article/21800581/whats-the-difference-between-measuring-location-by-uwb-wifi-and-bluetooth">
+                    <p>In practice, UWB signals are able to effectively measure distance between two devices with 5- to 10-cm accuracy, compared to roughly 5-m accuracy for Wi-Fi and Bluetooth. When implemented in a system of fixed beacons tracking tag locations, the locations can be calculated to within 10-cm accuracy.</p>
+                </blockquote>
+                <figcaption>– <a href="https://www.electronicdesign.com/technologies/communications/article/21800581/whats-the-difference-between-measuring-location-by-uwb-wifi-and-bluetooth">electronicdesign.com, What’s The Difference Between Measuring Location By UWB, Wi-Fi, and Bluetooth?</a></figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>AppleTV as a Hub</h3>
+            <p>File this under a thought based on a rumour. MacRumors shared an interesting take from Jon Prosser in October 2020, that the HomePod mini and Apple TV would act as Ultra-wideband base-stations</p>
+            <p>If the headset has Inside-out tracking, perhaps there's some accuracy gains to be had adding Outside-In tracking using an AppleTV as a point of reference.</p>
+            <p>I think this is unlikely. While Apple Watch without cellular requires an iPhone to operate, I don't see Apple applying the same level of demand here.</p>
+            <figure>
+                <blockquote cite="https://twitter.com/jon_prosser/status/1315446364856352768?s=20">
+                    <p>HomePod mini & the new Apple TV will both act as UWB base-stations 🧐</p>
+                    <ul>
+                        <li>Will precisely track your location as you walk inside house with other U1 devices.</li>
+                        <li>Use info for media controls, brightness/volume control, & door locks.</li>
+                    </ul>
+                    <p>Turns regular hardware into HomeKit hardware.</p>
+                </blockquote>
+                <figcaption>– <a href="https://twitter.com/jon_prosser/status/1315446364856352768?s=20">"not jon prosser"</a></figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <h3>Summary</h3>
+            <p>I think it's clear that Apple's journey into Augmented Reality and/or Virtual Reality has been going on for quite some time. I'm excited to see what the final product looks like when it's unveiled. Some of my ideas above might be far fetched, but I still think it's likely some of these will happen.</p>
+            <p>Let me know if you think this post was interesting. I'm <a href="https://mastodon.social/@alexmcroberts">@alexmcroberts@mastodon.social</a></p>
+        </section>
+    </article>
+  </body>
+</html>

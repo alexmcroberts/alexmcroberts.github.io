@@ -29,3 +29,6 @@ time {
     clear: both;
     display: block
 }
+a {
+    text-decoration: none;
+}
